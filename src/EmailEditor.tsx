@@ -27,12 +27,12 @@ export const EmailEditor = React.forwardRef<EditorRef, EmailEditorProps>(
     );
 
     const options: EmailEditorProps['options'] = {
-      ...(props.options || {}),
       appearance: props.appearance ?? props.options?.appearance,
       displayMode: props?.displayMode || props.options?.displayMode || 'web',
       locale: props.locale ?? props.options?.locale,
       projectId: props.projectId ?? props.options?.projectId,
       tools: props.tools ?? props.options?.tools,
+      ...(props.options || {}),
 
       id: editorId,
       source: {
