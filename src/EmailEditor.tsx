@@ -41,7 +41,9 @@ export const EmailEditor = React.forwardRef<EditorRef, EmailEditorProps>(
       },
     };
 
-    console.log(JSON.stringify(options), JSON.stringify(props.options));
+    console.log('hello1 ', JSON.stringify(options));
+
+    console.log('hello2 ', JSON.stringify(props.options));
 
     useImperativeHandle(
       ref,
