@@ -9,7 +9,8 @@ import pkg from '../package.json';
 import { Editor, EditorRef, EmailEditorProps } from './types';
 import { loadScript } from './loadScript';
 
-const win = typeof window === 'undefined' ? { __unlayer_lastEditorId: 0 } : window
+const win =
+  typeof window === 'undefined' ? { __unlayer_lastEditorId: 0 } : window;
 win.__unlayer_lastEditorId = win.__unlayer_lastEditorId || 0;
 
 export const EmailEditor = React.forwardRef<EditorRef, EmailEditorProps>(
@@ -28,7 +29,7 @@ export const EmailEditor = React.forwardRef<EditorRef, EmailEditorProps>(
     const options: EmailEditorProps['options'] = {
       ...(props.options || {}),
       appearance: props.appearance ?? props.options?.appearance,
-      displayMode: props?.displayMode || props.options?.displayMode || 'email',
+      displayMode: props?.displayMode || props.options?.displayMode || 'web',
       locale: props.locale ?? props.options?.locale,
       projectId: props.projectId ?? props.options?.projectId,
       tools: props.tools ?? props.options?.tools,
