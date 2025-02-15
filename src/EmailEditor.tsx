@@ -32,7 +32,7 @@ export const EmailEditor = React.forwardRef<EditorRef, EmailEditorProps>(
       locale: props.locale ?? props.options?.locale,
       projectId: props.projectId ?? props.options?.projectId,
       tools: props.tools ?? props.options?.tools,
-      ...(props.options || {}),
+      // ...(props.options || {}),
 
       id: editorId,
       source: {
@@ -41,7 +41,7 @@ export const EmailEditor = React.forwardRef<EditorRef, EmailEditorProps>(
       },
     };
 
-    console.log(JSON.stringify(options));
+    console.log(JSON.stringify(options), JSON.stringify(props.options));
 
     useImperativeHandle(
       ref,
